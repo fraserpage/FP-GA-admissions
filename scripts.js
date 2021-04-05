@@ -16,7 +16,6 @@
     /*Accordions*/
     
     /*On load, add 'active' class to accordion*/
-    document.
     document.querySelectorAll('dl').forEach(accordion =>{
       accordion.classList.add('active');
     });
