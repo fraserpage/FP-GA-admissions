@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+  <title>Fraser Page</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="https://kasia-fraser.love/img/f0.png" alt="Fraser Page">
+    <div>
+      <h1>Hi I'm Fraser. </h1>
+      <h2>I make stuff on the internet.</h2>
+      <div id="question">
+        <i>How are you?</i>
+        <button>Good, thanks!</button>
+        <button>Could be better</button>
+        <p id="response"></p>
+      </div>
+       <p>I do most of my web development work with the talented, detail driven and social-good focused designers at <a href="https://rallyrally.design" target="_blank">Rally Rally</a> (their site is a custom Wordpress website built by me) but I also take on some projects of my own, doing design, dev and even copy writing as needed. </p>
+        <p>I'm always working to improve my skills and try new things. One focus that I've brought to a lot of recent projects has been accessibility. That silly question and answer thing above isn't up to par on that front.</p>  
+        <p>I've been meaning to put together a portfolio website for a good long while now, so thanks, GA, for giving me the push to do so here.</p>
+    </div>
+  </header>
+  <main>
+    
+    <h2>Here are a few projects I've worked on recently.</h2>
+    
+    <dl id="accordion">
+      <dt>
+        <h3>An annual report mini-site</h3>
+        <img src="images/woodgreen.png">
+      </dt>
+      <dd>
+        <div class="accordion-left">
+          <p>
+          Despite the 'micro-site' label this site is actually quite large. It was developed as a Wordpress plugin so as not to require monkeying with Woodgreen's current theme. It utilized ACF flexible fields to provide a page-builder like functionality on the backend. 
+          </p>
+          <p><a href="https://www.woodgreen.org/about-us/annual-reports/2019-20/governance-update-woodgreen-foundation/">This is my favourite page. Fun animating charts!</a></p>
+        </div>
+        <div class="accordion-right">
+          <img src="images/woodgreen.png">
+        </div>
+      </dd>
+    </dl>
+    
+    <h3>A note about this site</h3>
+    <p>One of my coding goals is always to avoid repeating myself. <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">DRY.</a> In that spirit, because I didn't want to have to write out the same HTML markup over and over again for each of the 'accordion' elements above, and to give myself the flexibility to easily change that markup if I wanted to, I've written that section of the site inside of a Javascript object array and then loop through that array to create the accordion. In the real world I'd use a CMS for this to give myself the niceties of a real text editor. I'm sure this page is riddled with typos as a result of my doing my writing in a code editor. Sorry!</p>
+    <p>Note that I'm loading in my js from my github here. I'm not sure exactly what was happening but GA's Dash platform was erasing '+'s and doing other funny things to inline javascript code when loading it up on the 'fullscreen' url.</p>
+    </main>
+    <script src="scripts.js"></script>
+</body>

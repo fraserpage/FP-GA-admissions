@@ -1,0 +1,183 @@
+ body {
+  background:#ececec;
+  font-family: "lato";
+  font-size:16px;
+  margin: 0 auto;
+  padding: 10vw 5vw;
+}
+@media screen and (min-width:600px){
+  body{
+    font-size:19px;
+  }
+  header{
+    display:flex;
+  }
+}
+header {
+  margin-bottom: 7rem;
+}
+header > div{
+  max-width: 45rem;;
+}
+img{
+  width: 100%;
+}
+img[alt="Fraser Page"]{
+  height:9rem;
+  width: 9rem;
+  border-radius:100%;
+  object-fit:cover;
+  object-position: 100% 50%;
+  background-color:white;
+  margin-right: 2rem;
+}
+h1{
+  font-size: 3.5rem;
+  font-size: clamp(3.5rem, 10vw, 6rem)
+}
+h1, h2{
+  margin:0;  
+}
+h3{
+  margin:2rem 0;
+  line-height: 1.1;
+  font-size: 3rem;
+}
+a,
+#question i{
+  box-shadow: inset 0 -0.15em #f18433;
+  transition:all 0.3s;
+  text-decoration:none;
+  color:inherit;
+}
+#question i{
+  margin-right:1.5rem;
+}
+a:hover,
+#question:hover i{
+  box-shadow:inset 0 -0.25em #f18433
+}
+p {
+  font-weight:400;
+  margin: 1rem 0 0.5rem;
+}
+button{
+  cursor: pointer;
+  border:0;
+  padding:0;
+  margin: 1rem 0.3rem;
+  margin-bottom:0;
+  background:none;
+  font-style:italic;
+  font-size:inherit;
+  opacity:0;
+  color:inherit;
+  transition: all 0.3s;
+}
+button:focus{
+  outline:none;
+}
+#question{
+  cursor:pointer;  
+}
+#question:hover button{
+  opacity: 0.7;
+}
+#question:hover button:hover{
+  opacity:1;
+  box-shadow:inset 0 -0.22em #7376c6
+}
+#response{
+  margin: 0.5em 0 1.5em;
+  height:1rem;
+  opacity:0;
+  transition: all 0.3s;
+  font-style:italic;
+}
+#question:hover #response{
+  opacity: 0.7;
+}
+    
+/*Accordion*/
+dl{
+  margin-bottom: 5rem;
+}
+dt{
+  font-weight: 700;
+  color: #1a1a33;
+  margin: 0;
+  line-height: 2;
+  position: relative;
+  cursor:pointer;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+dt h3{
+  margin-right:2rem;
+}
+dt img{
+  width: 6rem;
+  transition: transform 0.8s;
+  transform-origin: right center;
+  margin-left: auto;
+}
+dt:hover img {
+  transform: scale(1.5);
+}
+dt.open img{
+  transform: scale(0);
+}
+.accordion-right img{
+  transition: transform 0.8s;
+  transform: scale(0);
+  transform-origin: left top;
+}
+dt.open + dd .accordion-right img{
+  transform: scale(1)
+}
+
+dl.active dt:focus,
+dl.active dt:hover {
+  outline:none;
+}
+dd {
+  margin: 0;
+  transition: height .5s ease;
+  overflow: hidden;
+  border-bottom: 1px solid white;
+}
+dd > :last-child{
+  margin-bottom: 2rem;  
+}
+
+.accordion-right {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem
+}
+.accordion-left {
+  margin-bottom: 1.5rem
+}
+
+@media screen and (min-width: 600px) {
+  dd {
+    display: flex;
+  }
+
+  .accordion-right {
+    flex: 0 0 50%;
+    order: 1;
+    margin-left: 10%;
+  }
+
+  .accordion-left {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    flex: 1;
+  }
+
+  .accordion-left>a {
+    margin-top: auto;
+  }
+}
