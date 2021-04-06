@@ -73,7 +73,7 @@ accordionContent.forEach(entry =>{
   accordionHTML += "\
     <dt>\
       <h3>"+entry.title+"</h3>\
-      <img src='"+entry.img+"'>\
+      <img src='https://fraserpage.github.io/fraser.page/"+entry.img+"'>\
     </dt>\
     <dd>\
       <div class='accordion-left'>\
@@ -85,7 +85,7 @@ accordionContent.forEach(entry =>{
         </a></p>\
       </div>\
       <div class='accordion-right'>\
-        <img src='"+entry.img+"'>\
+        <img src='https://fraserpage.github.io/fraser.page/"+entry.img+"'>\
       </div>\
     </dd>"
 })
