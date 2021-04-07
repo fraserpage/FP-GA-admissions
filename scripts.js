@@ -26,7 +26,7 @@ const accordionContent = [
     tags: "Fun Javascript, Firebase"
   },
   {
-    title: "A climate-tech accelerator site",
+    title: "A big modular Wordpress site",
     img: "images/cv.jpg",
     body: "Likely takes the crown for the biggest site I've created. Every piece of this site is an <a href='https://www.advancedcustomfields.com/' target='_blank'>ACF</a> flexible field, which makes this an incredibly flexible site on the backend. The centrepiece, in my mind is the robust 'filter' feature on the Community page which lets you sort through a huge number of 'business cards' via AJAX.",
     link: "https://climateventures.org/community/",
