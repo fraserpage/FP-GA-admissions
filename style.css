@@ -121,7 +121,7 @@ dt{
   align-items: center;
   transition: background-color 0.35s;
 }
-dt:hover{
+dt:not(.open):hover{
   background-color: #00000005;
 }
 dt h3{
