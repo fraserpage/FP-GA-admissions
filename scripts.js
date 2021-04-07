@@ -1,4 +1,5 @@
 /* Portfolio content */
+
 const accordionContent = [
   {
     title: "A work in progress",
@@ -47,14 +48,6 @@ const accordionContent = [
     link: "https://meckplaybook.com/plan-updates/",
     linkText: "This page has a fun little timeline slider thing.",
     tags: "Wordpress, Gutenberg, Multilingual"
-  },
-  {
-    title: "My wedding website",
-    img: "images/wedding.png",
-    body: "A labour of love! I wanted to build something fun for my wedding. Move your mouse around and Kasia and I will watch where you go. Click the heart emoji to shoot an arrow through it and make us kiss! On mobile you grab onto the bow and arrow and point it at the heart to do the same thing. (I mocked up a version of the mobile site that used your phone's accelerometer to move the ball around, which I thought was pretty cool but is so far from a normal mode of input that it was pretty confusing.)</p><p>Guests were all assigned custom urls at which they could RSVP and read more details. The site is running on Firebase and uses their API to create a slightly unusual RSVP form which saves as you go. I wanted to integrate the gift registry into the site too but ran out of time.",
-    link: "https://kasia-fraser.love/rsvp/v4jXBVDBjTyz7YDY9vDxVjmm",
-    linkText: "Here's Doug's RSVP page. Feel free to play around with the form.",
-    tags: "Fun Javascript, Firebase"
   },
   {
     title: "A fully custom Squarespace site",

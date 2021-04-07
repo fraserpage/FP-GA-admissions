@@ -16,9 +16,16 @@
 header {
   margin-bottom: 7rem;
 }
-header > div{
-  max-width: 45rem;;
+@media screen and (min-width:1100px){
+  .columns {
+    column-count: 2;
+    column-gap: 2rem;
+  }
+  .columns h3{
+    column-span: all;
+  }
 }
+
 img{
   width: 100%;
 }
@@ -59,7 +66,7 @@ a:hover,
 }
 p {
   font-weight:400;
-  margin: 1rem 0 0.5rem;
+  margin: 0 0 1rem;
 }
 button{
   cursor: pointer;
@@ -112,6 +119,10 @@ dt{
   font-size: 2rem;
   display: flex;
   align-items: center;
+  transition: background-color 0.35s;
+}
+dt:hover{
+  background-color: #00000005;
 }
 dt h3{
   margin-right:2rem;
@@ -122,10 +133,11 @@ dt img{
   transform-origin: right center;
   margin-left: auto;
 }
-dt:hover img {
+.active dt:hover img {
   transform: scale(1.5);
 }
-dt.open img{
+#accordion:not(.active) dt img,
+#accordion.active dt.open img{
   transform: scale(0);
 }
 .accordion-right img{

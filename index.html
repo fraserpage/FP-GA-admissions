@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <head>
   <title>Fraser Page</title>
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" >
+  <link rel="shortcut icon" type="image/x-icon" href="https://fraserpage.github.io/fraser.page/images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -19,36 +19,145 @@
         <button>Could be better</button>
         <p id="response"></p>
       </div>
-       <p>I do most of my web development work with the talented, detail driven and social-good focused designers at <a href="https://rallyrally.design" target="_blank">Rally Rally</a> (their site is a custom Wordpress website built by me) but I also take on some projects of my own, doing design, dev and even copy writing as needed. </p>
-        <p>I'm always working to improve my skills and try new things. One focus that I've brought to a lot of recent projects has been accessibility. That silly question and answer thing above isn't up to par on that front.</p>  
-        <p>I've been meaning to put together a portfolio website for a good long while now, so thanks, GA, for giving me the push to do so here.</p>
+      <div class="columns">
+        <p>
+          One of my coding goals is always to avoid repeating myself. <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">DRY.</a>
+          In that spirit, because I didn't want to have to write out the same HTML markup over and over again for each of the 'accordion' elements above, and to give myself the flexibility to easily change that markup if I wanted to, I've written that section of the site inside of a Javascript object array and then loop through that array to create the accordion. In the real world I'd use a CMS for this to give myself the niceties of a real text editor. I'm sure this page is riddled with typos as a result of my doing my writing in a code editor. Sorry!
+        </p>
+        <p>Note that I'm loading in my js and css from my github here. I'm not sure exactly what was happening but GA's Dash platform was erasing '+'s and doing other funny things to inline javascript code when loading it up on the 'fullscreen' url. Having css in an external file was just to make writing it a bit nicer.</p>
+      </div>
     </div>
   </header>
   <main>
-    
     <h2>Here are a few projects I've worked on recently.</h2>
-    
-    <dl id="accordion">
+    <dl id="accordion" class="active">
+      <dt>
+        <h3>A work in progress</h3>
+        <img src="https://fraserpage.github.io/fraser.page/images/ai.png">
+      </dt>
+      <dd>
+        <div class="accordion-left">
+          <p>This is my latest project. I put aside work on it to build this site, so you may encounter bugs. It's built on an entirely new-to-me stack: Netlify CMS, Eleventy static site generator, templates in Nunjucks, running on Netlify. I'm a big believer in modular systems, so this is all built using Netlify CMS's 'variable type' list widget which enables a page-builder type experience.         </p>
+          <p>
+            <a href="https://agnewiler.netlify.app/" target="_blank">Check it out        </a>
+          </p>
+        </div>
+        <div class="accordion-right">
+          <img src="https://fraserpage.github.io/fraser.page/images/ai.png">
+        </div>
+      </dd>
       <dt>
         <h3>An annual report mini-site</h3>
-        <img src="images/woodgreen.png">
+        <img src="https://fraserpage.github.io/fraser.page/images/woodgreen.png">
       </dt>
       <dd>
         <div class="accordion-left">
           <p>
-          Despite the 'micro-site' label this site is actually quite large. It was developed as a Wordpress plugin so as not to require monkeying with Woodgreen's current theme. It utilized ACF flexible fields to provide a page-builder like functionality on the backend. 
+            Despite the 'mini-site' label this site is actually quite large. It was developed as a Wordpress plugin so as not to require monkeying with Woodgreen's current theme. It utilizes <a href="https://www.advancedcustomfields.com/" target="_blank">ACF</a>
+            flexible fields to provide a page-builder like functionality on the backend.        
           </p>
-          <p><a href="https://www.woodgreen.org/about-us/annual-reports/2019-20/governance-update-woodgreen-foundation/">This is my favourite page. Fun animating charts!</a></p>
+          <p>
+            <a href="https://www.woodgreen.org/about-us/annual-reports/2019-20/governance-update-woodgreen-foundation/" target="_blank">This is my favourite page. Fun animating charts!        </a>
+          </p>
         </div>
         <div class="accordion-right">
-          <img src="images/woodgreen.png">
+          <img src="https://fraserpage.github.io/fraser.page/images/woodgreen.png">
+        </div>
+      </dd>
+      <dt>
+        <h3>My wedding website</h3>
+        <img src="https://fraserpage.github.io/fraser.page/images/wedding.png">
+      </dt>
+      <dd>
+        <div class="accordion-left">
+          <p>A labour of love! I wanted to build something fun for my wedding. Move your mouse around and Kasia and I will watch where you go. Click the heart emoji to shoot an arrow through it and make us kiss! On mobile you grab onto the bow and arrow and point it at the heart to do the same thing. (I mocked up a version of the mobile site that used your phone's accelerometer to move the ball around, which I thought was pretty cool but is so far from a normal mode of input that it was pretty confusing.)</p>
+          <p>Guests were all assigned custom urls at which they could RSVP and read more details. The site is running on Firebase and uses their API to create a slightly unusual RSVP form which saves as you go. I wanted to integrate the gift registry into the site too but ran out of time.        </p>
+          <p>
+            <a href="https://kasia-fraser.love/rsvp/v4jXBVDBjTyz7YDY9vDxVjmm" target="_blank">Here's Doug's RSVP page. Feel free to play around with the form.        </a>
+          </p>
+        </div>
+        <div class="accordion-right">
+          <img src="https://fraserpage.github.io/fraser.page/images/wedding.png">
+        </div>
+      </dd>
+      <dt>
+        <h3>A climate-tech accelerator site</h3>
+        <img src="https://fraserpage.github.io/fraser.page/images/cv.png">
+      </dt>
+      <dd>
+        <div class="accordion-left">
+          <p>
+            Likely takes the crown for the biggest site I've created. Every piece of this site is an <a href="https://www.advancedcustomfields.com/" target="_blank">ACF</a>
+            flexible field, which makes this an incredibly flexible site on the backend. The centrepiece, in my mind is the robust 'filter' feature on the Community page which lets you sort through a huge number of 'business cards' via AJAX.        
+          </p>
+          <p>
+            <a href="https://climateventures.org/community/" target="_blank">Check out the filter page here.        </a>
+          </p>
+        </div>
+        <div class="accordion-right">
+          <img src="https://fraserpage.github.io/fraser.page/images/cv.png">
+        </div>
+      </dd>
+      <dt>
+        <h3>A patched up Squarespace site</h3>
+        <img src="https://fraserpage.github.io/fraser.page/images/schools.png">
+      </dt>
+      <dd>
+        <div class="accordion-left">
+          <p>This is a Squarespace website that I was called into help with. On the CSS side, the most exciting bit is the fairly complicated underline effect on the main headings. These are created with a precisely defined repeating linear gradient background.</p>
+          <p>Squarespace has no support for multilingual sites, which this is. To make the header and footer change to match the language of the page I'm using javascript to read the site url and then swap in the correct elements based on the page belonging to the 'en' or 'fr' part of the site.</p>
+          <p>On the 'Resources' page I AJAX in the next page of resources right away to get around Squarespace's limit on the number of blog posts that a page can show at once. Any further posts (if they exist) can be AJAX'd in by clicking on a button at the bottom. </p>
+          <p>The 'Resources' are also filterable but Squarespace's filter widget is confoundingly dumb. It gives no indication of what the current filter state is. To fix this, I parse the url again and write a title based on this. I also made the filter load posts by AJAX to prevent a confusing page reload.        </p>
+          <p>
+            <a href="https://www.healthyschoolsalliance.ca/en/resources/" target="_blank">Check out the Resources page.        </a>
+          </p>
+        </div>
+        <div class="accordion-right">
+          <img src="https://fraserpage.github.io/fraser.page/images/schools.png">
+        </div>
+      </dd>
+      <dt>
+        <h3>A Multilingual Wordpress Gutenberg site</h3>
+        <img src="https://fraserpage.github.io/fraser.page/images/meck.png">
+      </dt>
+      <dd>
+        <div class="accordion-left">
+          <p>This fairly simple site is built entirely on Wordpress' Gutenberg editor, making for a flexible component based site with a fully WYSIWYG editor experience. The multilingual logic is all custom code. A lot of attention was paid to accessibility on this site.        </p>
+          <p>
+            <a href="https://meckplaybook.com/plan-updates/" target="_blank">This page has a fun little timeline slider thing.        </a>
+          </p>
+        </div>
+        <div class="accordion-right">
+          <img src="https://fraserpage.github.io/fraser.page/images/meck.png">
+        </div>
+      </dd>
+      <dt>
+        <h3>A fully custom Squarespace site</h3>
+        <img src="https://fraserpage.github.io/fraser.page/images/book.png">
+      </dt>
+      <dd>
+        <div class="accordion-left">
+          <p>
+            This commerce site is running on Squarespace's 'Developer' platform which allows for <i>almost</i>
+            fully custom themes. The latest version of Squarespace has retired the developer platform which I think was the right call on their part.        
+          </p>
+          <p>
+            <a href="https://www.heresmybook.com/" target="_blank">Check it out        </a>
+          </p>
+        </div>
+        <div class="accordion-right">
+          <img src="https://fraserpage.github.io/fraser.page/images/book.png">
         </div>
       </dd>
     </dl>
-    
-    <h3>A note about this site</h3>
-    <p>One of my coding goals is always to avoid repeating myself. <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">DRY.</a> In that spirit, because I didn't want to have to write out the same HTML markup over and over again for each of the 'accordion' elements above, and to give myself the flexibility to easily change that markup if I wanted to, I've written that section of the site inside of a Javascript object array and then loop through that array to create the accordion. In the real world I'd use a CMS for this to give myself the niceties of a real text editor. I'm sure this page is riddled with typos as a result of my doing my writing in a code editor. Sorry!</p>
-    <p>Note that I'm loading in my js from my github here. I'm not sure exactly what was happening but GA's Dash platform was erasing '+'s and doing other funny things to inline javascript code when loading it up on the 'fullscreen' url.</p>
-    </main>
-    <script src="scripts.js"></script>
+    <div class="columns">
+      <h3>A note about this site</h3>
+      <p>
+        One of my coding goals is always to avoid repeating myself. <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">DRY.</a>
+        In that spirit, because I didn't want to have to write out the same HTML markup over and over again for each of the 'accordion' elements above, and to give myself the flexibility to easily change that markup if I wanted to, I've written that section of the site inside of a Javascript object array and then loop through that array to create the accordion. In the real world I'd use a CMS for this to give myself the niceties of a real text editor. I'm sure this page is riddled with typos as a result of my doing my writing in a code editor. Sorry!
+      </p>
+      <p>Note that I'm loading in my js from my github here. I'm not sure exactly what was happening but GA's Dash platform was erasing '+'s and doing other funny things to inline javascript code when loading it up on the 'fullscreen' url.</p>
+    </div>
+  </main>
+  <script src="https://fraserpage.github.io/fraser.page/scripts.js"></script>
 </body>
