@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<head>
+  <title>Some weird poems</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://fraserpage.github.io/fraser.page/images/favicon.png">
+  <link href="/normalize.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <style>
+    header {
+      display: flex;
+      align-items: baseline;
+      font-family: 'Helvetica', sans-serif;
+      background: pink;
+      padding: 0.5rem 5vw;
+    }
+    nav {
+      margin-left: auto;
+    }
+    img[alt="Fraser Page"]{
+      align-self: center;
+      height:4rem;
+      width: 4rem;
+      border-radius:100%;
+      object-fit: cover;
+      margin-right: 2rem;
+    }
+    ul {
+      padding: 0;
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    li:first-child{
+      padding-left:0;
+    }
+    li:last-child{
+      padding-right:0;
+    }
+    #poems {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -2rem;
+    }
+
+    #poems article {
+      flex-grow: 1;
+      width: 33.333%;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      box-sizing: border-box;
+    }
+    h2{
+      font-family: 'Helvetica', sans-serif;
+    }
+
+    main {
+      margin: 0 auto;
+      padding: 2rem 5vw;
+      max-width: 1000px;
+    }
+    @media (max-width: 900px){
+      header {
+        display: block;
+      }
+      img[alt="Fraser Page"]{
+        position:absolute;
+        top: 2.5rem;
+      }
+      h1,
+      nav {
+        margin-left: 6rem;
+      }
+      #poems article {
+        width: 50%;
+      }
+    }
+    @media (max-width: 575px) {
+      header {
+        display: block;
+      }
+      h1 {
+        font-size: 36px;
+        padding: 5px;
+      }
+      li {
+        padding: 0.25rem 0;
+        display: block;
+      }
+      #poems article {
+        width: 100%;
+      }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://fraserpage.github.io/fraser.page/images/fraser.jpg" alt="Fraser Page">
+    <h1>It's me <strike>Jeff</strike> Fraser!</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a class="filter" data-poem="all" href="#">All Poems</a></li>
+        <li><a class="filter" data-poem="best" href="#">Best Poems</a></li>
+        <li><a class="filter" data-poem="worst" href="#">Worst Poems</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="about">
+      <h2>Something about me.</h2>
+        <p>I guess I wrote these poems. Do you like them? Try clicking the button? You can filter them by clicking the All/Best/Worst buttons above.</p>
+        <p>Yes, I wrote them all twice because <strike>my blog seemed too empty with only one copy of each poem.</strike> I mean... because I like them so much. </p>
+    </section>
+    <section id="poems">
+      <article data-poem="worst">
+        <h2>VHS umami pop-up trust fund</h2>
+        <p>Marfa church-key kitsch bicycle rights, 8-bit mixtape cardigan gentrify Echo Park. Street art swag brunch, next level roof party Schlitz hella organic keffiyeh selfies. You probably haven't heard of them polaroid hashtag +1, meggings biodiesel Portland High Life cray tumblr retro.</p>
+        <button>Like</button>
+      </article>
+      <article data-poem="best">
+        <h2>Sartorial synth Echo Park, roof party</h2>
+        <p>chambray you probably haven't heard of them pour-over viral selvage umami skateboard VHS post-ironic selfies. Wes Anderson gentrify fanny pack twee, bicycle rights bitters blog keffiyeh plaid flannel. Tonx irony cliche sustainable mlkshk bitters. Four loko leggings chambray Vice.</p>
+        <button>Like</button>
+      </article>
+      <article data-poem="best">
+        <h2>Forage food truck keytar master cleanse</h2>
+        <p>ethical thundercats sustainable locavore quinoa Neutra. Aesthetic tacky sweater single-origin coffee, bicycle rights organic lo-fi street art american apparel ennui four loko ethnic Brooklyn small batch. Forage YOLO polaroid</p>
+        <button>Like</button>
+      </article>
+      <article data-poem="worst">
+        <h2>VHS umami pop-up trust fund</h2>
+        <p>Marfa church-key kitsch bicycle rights, 8-bit mixtape cardigan gentrify Echo Park. Street art swag brunch, next level roof party Schlitz hella organic keffiyeh selfies. You probably haven't heard of them polaroid hashtag +1, meggings biodiesel Portland High Life cray tumblr retro.</p>
+        <button>Like</button>
+      </article>
+      <article data-poem="best">
+        <h2>Sartorial synth Echo Park, roof party</h2>
+        <p>chambray you probably haven't heard of them pour-over viral selvage umami skateboard VHS post-ironic selfies. Wes Anderson gentrify fanny pack twee, bicycle rights bitters blog keffiyeh plaid flannel. Tonx irony cliche sustainable mlkshk bitters. Four loko leggings chambray Vice.</p>
+        <button>Like</button>
+      </article>
+      <article data-poem="best">
+        <h2>Forage food truck keytar master cleanse</h2>
+        <p>ethical thundercats sustainable locavore quinoa Neutra. Aesthetic tacky sweater single-origin coffee, bicycle rights organic lo-fi street art american apparel ennui four loko ethnic Brooklyn small batch. Forage YOLO polaroid</p>
+        <button>Like</button>
+      </article>
+    </section>
+  </main>
+  <script>
+  document.querySelectorAll('a.filter').forEach(filter => {
+      filter.addEventListener('click', function () {
+        let type = filter.dataset.poem;
+        document.querySelectorAll('#poems article').forEach(article => {
+          if (type == 'all'){
+            article.style.display = "block";
+          }
+          else if (article.dataset.poem == type){
+            article.style.display = "block";
+          }
+          else{
+            article.style.display = "none";
+          }
+        });
+      });
+    });
+    document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', function () {
+        if (button.innerText == "Like"){
+            button.innerText = "You liked this post!";
+        }
+        else if( button.innerText == "You REALLY REALLY REALLY REALLY liked this post!"){
+          button.innerText = "Okay that's too much liking. You're cut off";
+          button.disabled = true;
+        }
+        else{
+            button.innerText = button.innerText.replace("liked", "REALLY liked");
+        }
+      });
+    });
+  </script>
+</body>
